@@ -6,13 +6,7 @@ folder('project-a') {
 job('project-a/TriggerAll') {
 }
 
-pipelineJob('project-a/192.168.0.1') {
-    triggers {
-        upstream('TriggerAll', 'SUCCESS')
-    }
-}
-
-job('project-b/192.168.0.1') {
+job('project-a/192.168.0.1') {
     triggers {
         upstream('TriggerAll', 'SUCCESS')
     }
@@ -27,7 +21,7 @@ job('project-b/192.168.0.1') {
     }
 }
 
-job('project-b/192.168.0.2') {
+job('project-a/192.168.0.2') {
     triggers {
         upstream('TriggerAll', 'SUCCESS')
     }

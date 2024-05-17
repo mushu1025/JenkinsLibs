@@ -17,3 +17,15 @@ pipelineJob('project-a/192.168.0.2') {
         upstream('TriggerAll', 'SUCCESS')
     }
 }
+
+job('project-a/192.168.0.3') {
+    triggers {
+        upstream('TriggerAll', 'SUCCESS')
+    }
+}
+
+job('project-a/192.168.0.4') {
+    triggers {
+        upstream('TriggerAll', 'SUCCESS')
+    }
+}

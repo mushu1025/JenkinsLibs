@@ -3,7 +3,6 @@ String executeCommands = "$ExecuteCommands"
 String remoteIPsStr = "$RemoteIPs"
 String delimiter = ','
 List<String> remoteIPs = remoteIPsStr.split(delimiter)
-println remoteIPs
 
 folder(folderNameStr) {
     displayName(folderNameStr)

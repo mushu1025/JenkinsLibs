@@ -21,7 +21,7 @@ for (int i = 0; i < remoteIPs.size(); i++) {
         }
         steps {
             sshBuilder {
-                siteName('root@192.168.3.119:22')
+                siteName('root@'+remoteIPs+':22')
                 command(executeCommands)
                 // Execute each line in the script individually.
                 execEachLine(false)
